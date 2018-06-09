@@ -19,17 +19,18 @@ int GCD(int a, int b) {
 *@func Uppersum() returns the sum of the upper triangle. It accepts three arguments
 @param r : No of rows
 @param c : No of columns
-@param mat[m][n] : The matrix
+@param mat : The matrix
 @ret upper_sum = Integer Value , Sum.
 */
-int Uppersum(int r, int c,mat[m][n]){
+int Uppersum(int r, int c, int mat[m][n]) {
     int i, j;
     int upper_sum = 0;
     /*to calculate sum of upper triangle*/
     for (i = 0; i < r; i++)
         for (j = 0; j < c; j++) {
             if (i <= j) {
-                upper_sum += mat[i][j]; }
+                upper_sum += mat[i][j]; 
+            }
         }
   return upper_sum;
 }
