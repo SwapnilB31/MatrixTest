@@ -1,3 +1,34 @@
+
+
+/**
+*@func rotate() returns the rotated matrix of orginal version . It accepts four arguments 
+@parm m : number of row 
+@parm n : number of column 
+@orginalArray : orginal array  
+@rotateArray : Extra one array for storing rotate version of array element 
+
+*/
+
+void rotate(int m , int n, int orginalArray[][m],int rotateArray[][n])
+{
+	for(int j = 1; j < m; j++)
+	{
+		for (int i = m-1 ,int  k = 0; i >= 0, k < m; i--, k++)
+		{
+			rotateArray[j][k] = orginalArray[j][i];
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
 #include <iostream>
 
 using namespace std;
