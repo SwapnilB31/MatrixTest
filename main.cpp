@@ -32,10 +32,6 @@ int ** tan_mat_clock_rot(int **a,int r,int c)
    return a;
 }
 
-
-
-using namespace std;
-
 /**
 *@func GCD() returns the greatest common divisors of two integers. It accepts two arguments
 @param a : The first integer
