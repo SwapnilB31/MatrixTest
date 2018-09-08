@@ -102,6 +102,34 @@ void rotate(int m , int n, int orginalArray[][m],int rotateArray[][n])
 		}
 	}
 }
+/* @func getCofactor() will return the matrix that contains element whose determinant has to be find. 
+Position p and q is sent to find the cofactor, so the remaing element except the row p and column qwill be considered to find cofactor.
+@param mat[m][n]: is the original matrix.
+@param temp[m][n]: will store the values for cofactor.
+@param p,q: position whose cofactor has to be find.
+@param m,n: number of rows and columns.
+*/ 
+void getCofactor(int mat[m][n], int temp[m][n], int p, int q, int m, int n) 
+{ 
+    int r = 0, c = 0; 
+    for (int i = 0; i < m; i++) 
+    { 
+        for (int j = 0; j < n; j++) 
+        { 
+           if (i != p && j != q) 
+            { 
+                temp[r][c++] = mat[i][j]; 
+                 
+                if (c == n - 1) 
+                { 
+		    c = 0; 
+                    r++; 
+                } 
+            } 
+        } 
+    }
+	 
+} 
 /*
 LCM of 2 numbers
 lcm: the class which contains the variables and functions used in the program
