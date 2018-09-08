@@ -36,6 +36,23 @@ int Uppersum(int r, int c, int mat[m][n]) {
   return upper_sum;
 }
 
+// function to rotate matrix anticlockwise
+int rotateMatrix(mat[m][n])
+{
+   for (int x = 0; x < m / 2; x++)
+    {
+        for (int y = x; y < n-x-1; y++)
+        {
+            int temp = mat[x][y];
+            mat[x][y] = mat[y][n-1-x];
+            mat[y][n-1-x] = mat[n-1-x][n-1-y];
+            mat[n-1-x][n-1-y] = mat[n-1-y][x];
+            mat[n-1-y][x] = temp;
+        }
+    }
+  return mat[m][n];
+}
+
 /**
 *@func rotate() returns the rotated matrix of orginal version . It accepts four arguments 
 @parm m : number of row 
@@ -99,9 +116,9 @@ void lcm::calculate(void)
 		while(true);
 	}
 
-
-
 int main(int argc, char **argv) 
 {
   return 0;
 }
+
+
