@@ -110,23 +110,23 @@ lcm: the class which contains the variables and functions used in the program
 @param num2: the second integer number
 @param maximum: the greatest of two numbers
 @param answer: lcm of the two numbers is stored in this variable
-object1 : the object for the class "lcm"
 */
 class lcm
 {
     public:
 	int num1,num2,maximum,answer;
 	void calculate(void);
-
-};
-void lcm::calculate(void)
-	{
-  /*
+	 /*
   this function prints the lcm of two user given numbers. The strategy used is the largest number that is divisible by
   two numbers will be the lcm of two numbers. thus the conditional operator used assigns the greatest input number to "maximum".
   then the divisibility check is done in do-while loop. if the "maximum" is not divisible by any of the numbers then it is
   incremented in else part and proceeded until lcm is found.  
   */
+
+};
+void lcm::calculate(void)
+	{
+ 
 		maximum=(num1>num2)?num1:num2;
 		do
 		{
@@ -137,7 +137,7 @@ void lcm::calculate(void)
 		if((maximum%num1)==0 && (maximum%num2)==0)
 		{
 			answer=maximum;
-			cout<<"the LCM of 2 nos is : "<<maximum;
+			cout<<"the LCM of 2 nos is : "<<answer;
 			return;
 		}
 		else
