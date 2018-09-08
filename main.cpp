@@ -1,4 +1,38 @@
 #include <iostream>
+#include<cstdlib>
+
+using namespace std;
+void swap (int &a,int &b)
+{
+	int t=a;
+	a=b;
+	b=t;
+}
+ 
+int ** tan_mat_anti_clock_rot(int **a,int r,int c)
+{
+    for(int i=0;i<r;i++)
+	   for(int j=i+1;j<c; swap(a[i][j],a[j][i]),j++);	 
+	        	  	   
+    for(int i=0;i<r;i++)
+	   for(int j=0,k=c-1;j<k;swap(a[j][i],a[k][i]),j++,k--);  
+
+   return a;
+}
+
+int ** tan_mat_clock_rot(int **a,int r,int c)
+{
+   for(int i=r;i>=0;i--)
+	   for(int j=0,k=c-1;j<k;swap(a[j][i],a[k][i]),j++,k--);  
+	  
+	   
+     for(int i=0;i<r;i++)
+	   for(int j=i+1;j<c;swap(a[i][j],a[j][i]),j++); 
+ 
+   return a;
+}
+
+
 
 using namespace std;
 
