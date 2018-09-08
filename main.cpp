@@ -137,7 +137,7 @@ void lcm::calculate(void)
 		if((maximum%num1)==0 && (maximum%num2)==0)
 		{
 			answer=maximum;
-			cout<<"the LCM of 2 nos is : "<<maximum;
+			cout<<"the LCM of 2 nos is : "<<answer;
 			return;
 		}
 		else
