@@ -2,12 +2,28 @@
 #include<cstdlib>
 
 using namespace std;
+
+/*
+*@func swap() - swaps the values of two integer variables
+*@param a : Reference to integer - reference to First variable
+*@param b : Reference to integer - reference Second variable
+*@ret : void - modifies - the values of the arguments passed by reference
+*/
+
 void swap (int &a,int &b)
 {
 	int t=a;
 	a=b;
 	b=t;
 }
+
+/*
+*@func tan_mat_anti_clock_rot - Rotates the given array, a anticlockwise by 90 degrees
+*@param a - is a 2d array of dimensions r x c
+*@param r : integer - number of rows in the array
+*@param c : integer - number of columns in the array
+*@ret : 2d pointer - 2D array 'a', rotated anti-clockwise by 90 degrees
+*/
  
 int ** tan_mat_anti_clock_rot(int **a,int r,int c)
 {
@@ -19,6 +35,14 @@ int ** tan_mat_anti_clock_rot(int **a,int r,int c)
 
    return a;
 }
+
+/*
+*@func tan_mat_anti_clock_rot - Rotates the given array, 'a' clockwise by 90 degrees
+*@param a - is a 2d array of dimensions r x c
+*@param r : integer - number of rows in the array
+*@param c : integer - number of columns in the array
+*@ret : 2d pointer - 2D array 'a', rotated clockwise by 90 degrees
+*/
 
 int ** tan_mat_clock_rot(int **a,int r,int c)
 {
